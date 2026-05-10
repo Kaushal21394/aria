@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3.11 --version)",
+      "Bash(brew install:*)",
+      "Bash(npm install:*)",
+      "Bash(xargs kill:*)",
+      "Bash(node -e \"const t = require\\('./tailwind.config.js'\\); console.log\\('Tailwind config OK, content:', t.default?.content ?? t.content\\)\")",
+      "Bash(node -e ':*)",
+      "Bash(.venv/bin/pip show:*)",
+      "Bash(.venv/bin/python -c ':*)",
+      "Bash(.venv/bin/python -c \"from backend.agents.graph import build_aria_graph; build_aria_graph\\(\\); print\\('OK'\\)\")",
+      "Bash(.venv/bin/python -c \"from backend.agents._utils import with_backoff; print\\('OK'\\)\")",
+      "Read(//Users/kaushalchaudhary/**)",
+      "Read(//tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/aria_intelligence/**)",
+      "Read(//private/tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/aria_intelligence/**)",
+      "Read(//tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/aria_dashboard_web/**)",
+      "Read(//private/tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/aria_dashboard_web/**)",
+      "Read(//tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/account_research_scoring_web/**)",
+      "Read(//private/tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/account_research_scoring_web/**)",
+      "Read(//tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/outreach_package_preview_web/**)",
+      "Read(//private/tmp/stitch_aria/stitch_aria_autonomous_cro_outreach/outreach_package_preview_web/**)",
+      "Bash(npm run:*)",
+      "Bash(python3 -c ':*)",
+      "Bash(python3 -c \"import json; nb = json.load\\(open\\('/Users/kaushalchaudhary/Projects/aria/notebooks/phase4_production_saas.ipynb'\\)\\); print\\(f'Valid JSON ✅'\\); print\\(f'Cells: {len\\(nb[\\\\\"cells\\\\\"]\\)}'\\); print\\(f'Format: nbformat {nb[\\\\\"nbformat\\\\\"]}.{nb[\\\\\"nbformat_minor\\\\\"]}'\\); [print\\(f'  Cell {i}: {c[\\\\\"cell_type\\\\\"]:8} {\\(c[\\\\\"source\\\\\"][0] if c[\\\\\"source\\\\\"] else \\\\\"\\\\\"\\)[:60].strip\\(\\)}'\\) for i, c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(.venv/bin/pip install:*)",
+      "Bash(.venv/bin/python -c \"import jwt, fastapi, anthropic; print\\('all imports ok'\\)\")",
+      "Bash(xxd)"
+    ],
+    "additionalDirectories": [
+      "/Users/kaushalchaudhary/Projects/aria/backend"
+    ]
+  }
+}

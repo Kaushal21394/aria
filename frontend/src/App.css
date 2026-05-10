@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Aria Intelligence — Deep Oceanic Dark */
+    background-color: #001330;
+    color: #d7e2ff;
+    font-family: "Inter", system-ui, sans-serif;
+    @apply antialiased;
+  }
+
+  /* Thin scrollbar — surface-container-highest */
+  ::-webkit-scrollbar        { width: 4px; }
+  ::-webkit-scrollbar-track  { background: transparent; }
+  ::-webkit-scrollbar-thumb  { background: #213557; border-radius: 10px; }
+}
+
+@layer utilities {
+  /*
+   * glass-panel
+   * Background from surface-container (#081f40 = rgb 8 31 64).
+   * Backdrop blur 12px, 1px white/8 border — matches Stitch reference.
+   */
+  .glass-panel {
+    background: rgba(8, 31, 64, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /*
+   * thought-line — dashed vertical connector in the agent step list.
+   * Brand spec: "thin dashed Primary Blue line to show progression of logic".
+   * primary-container = #009afe
+   */
+  .thought-line {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 154, 254, 0.45) 50%,
+      transparent 50%
+    );
+    background-size: 1px 8px;
+  }
+
+  /* Entrance animation */
+  .animate-fade-in {
+    animation: fadeIn 0.35s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /*
+   * cursor-blink — streaming text cursor.
+   * Uses primary-container (#009afe = Electric Blue).
+   */
+  .cursor-blink::after {
+    content: "▋";
+    color: #009afe;
+    animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    margin-left: 2px;
+  }
+
+  /*
+   * ai-glow — subtle amethyst outer glow for AI-generated / active elements.
+   * Brand spec: "AI elements use Amethyst Purple outer glow".
+   * tertiary-container = #ba7ce3
+   */
+  .ai-glow {
+    box-shadow: 0 0 20px rgba(186, 124, 227, 0.2);
+  }
+
+  /*
+   * primary-glow — electric blue glow for active/processing states.
+   * primary-container = #009afe
+   */
+  .primary-glow {
+    box-shadow: 0 0 15px rgba(0, 154, 254, 0.2);
+  }
+
+  /* Sidebar nav active item */
+  .nav-active {
+    background: linear-gradient(to right, rgba(0, 154, 254, 0.12), transparent);
+    border-left: 3px solid #009afe;
+  }
+}

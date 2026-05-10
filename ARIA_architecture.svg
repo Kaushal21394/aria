@@ -1,0 +1,116 @@
+<svg width="680" viewBox="0 0 680 650" xmlns="http://www.w3.org/2000/svg" font-family="system-ui, -apple-system, sans-serif">
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+  <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+
+<!-- Background -->
+<rect width="680" height="650" fill="#ffffff"/>
+
+<!-- ── Trigger input ── -->
+<rect x="180" y="20" width="240" height="44" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="300" y="38" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Trigger: company name input</text>
+<text x="300" y="56" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">e.g. "Novo Nordisk", "AstraZeneca"</text>
+
+<!-- Arrow: trigger → P1 -->
+<line x1="300" y1="64" x2="300" y2="94" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ── Phase labels ── -->
+<text x="92" y="134" text-anchor="end" dominant-baseline="central" font-size="12" fill="#888780">Phase 1</text>
+<text x="92" y="270" text-anchor="end" dominant-baseline="central" font-size="12" fill="#888780">Phase 2</text>
+<text x="92" y="398" text-anchor="end" dominant-baseline="central" font-size="12" fill="#888780">Phase 3</text>
+<text x="92" y="502" text-anchor="end" dominant-baseline="central" font-size="12" fill="#888780">Phase 4</text>
+
+<!-- ── Plugin 1 — Sponsor Brief Generator ── -->
+<rect x="100" y="96" width="400" height="76" rx="10" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+<text x="300" y="126" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#3C3489">Plugin 1 — Sponsor brief generator</text>
+<text x="300" y="152" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#534AB7">Anthropic SDK · streaming outputs · tool calling · structured JSON</text>
+
+<!-- P1 data labels -->
+<line x1="500" y1="126" x2="512" y2="126" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="516" y="118" dominant-baseline="central" font-size="12" fill="#5F5E5A">ClinicalTrials.gov API</text>
+<text x="516" y="136" dominant-baseline="central" font-size="12" fill="#5F5E5A">SEC EDGAR · web search</text>
+
+<!-- Arrow: P1 → P2 -->
+<line x1="300" y1="172" x2="300" y2="202" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ── Plugin 2 — Multi-Agent Orchestrator ── -->
+<rect x="100" y="204" width="400" height="128" rx="10" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="300" y="228" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#0C447C">Plugin 2 — Multi-agent orchestrator</text>
+<text x="300" y="248" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#185FA5">LangGraph · MCP tool use · ReAct pattern · handoffs</text>
+
+<!-- Sub-agent: Trial -->
+<rect x="110" y="260" width="88" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="154" y="278" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Trial</text>
+<text x="154" y="296" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">agent</text>
+
+<!-- Sub-agent: Intel -->
+<rect x="206" y="260" width="88" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="250" y="278" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Intel</text>
+<text x="250" y="296" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">agent</text>
+
+<!-- Sub-agent: Fit Scorer -->
+<rect x="302" y="260" width="88" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="346" y="278" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Fit</text>
+<text x="346" y="296" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">scorer</text>
+
+<!-- Sub-agent: Outreach -->
+<rect x="398" y="260" width="92" height="52" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="444" y="278" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Outreach</text>
+<text x="444" y="296" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">drafter</text>
+
+<!-- P2 data labels -->
+<line x1="500" y1="270" x2="512" y2="270" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="516" y="262" dominant-baseline="central" font-size="12" fill="#5F5E5A">Web search MCP</text>
+<text x="516" y="280" dominant-baseline="central" font-size="12" fill="#5F5E5A">Tool use / MCP</text>
+
+<!-- Arrow: P2 → P3 -->
+<line x1="300" y1="332" x2="300" y2="358" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ── Plugin 3 — RAG Knowledge Layer ── -->
+<rect x="100" y="360" width="400" height="76" rx="10" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+<text x="300" y="390" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#712B13">Plugin 3 — RAG knowledge layer</text>
+<text x="300" y="416" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">Embeddings · hybrid retrieval · RAGAS evals · LangSmith</text>
+
+<!-- P3 data labels -->
+<line x1="500" y1="390" x2="512" y2="390" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="516" y="382" dominant-baseline="central" font-size="12" fill="#5F5E5A">Pinecone / pgvector</text>
+<text x="516" y="400" dominant-baseline="central" font-size="12" fill="#5F5E5A">Proposals corpus</text>
+
+<!-- Arrow: P3 → P4 -->
+<line x1="300" y1="436" x2="300" y2="462" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ── Plugin 4 — Production SaaS Shell ── -->
+<rect x="100" y="464" width="400" height="76" rx="10" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="300" y="494" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#633806">Plugin 4 — Production SaaS shell</text>
+<text x="300" y="520" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#854F0B">FastAPI · Streamlit · JWT auth · usage metering · multi-tenant</text>
+
+<!-- P4 data labels -->
+<line x1="500" y1="494" x2="512" y2="494" stroke="#B4B2A9" stroke-width="0.5" stroke-dasharray="3 3"/>
+<text x="516" y="486" dominant-baseline="central" font-size="12" fill="#5F5E5A">Gmail MCP</text>
+<text x="516" y="504" dominant-baseline="central" font-size="12" fill="#5F5E5A">Calendar MCP</text>
+
+<!-- Arrow: P4 → outputs -->
+<line x1="300" y1="540" x2="300" y2="568" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<!-- ── Output artifacts ── -->
+<rect x="105" y="570" width="90" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="150" y="587" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">BD brief</text>
+<text x="150" y="603" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">PDF report</text>
+
+<rect x="205" y="570" width="90" height="44" rx="8" fill="#E1F5EEE" stroke="#0F6E56" stroke-width="0.5" fill="#E1F5EE"/>
+<text x="250" y="587" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">Email draft</text>
+<text x="250" y="603" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">Gmail MCP</text>
+
+<rect x="305" y="570" width="90" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="350" y="587" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">Cal invite</text>
+<text x="350" y="603" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">Calendar MCP</text>
+
+<rect x="405" y="570" width="90" height="44" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+<text x="450" y="587" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">Fit score</text>
+<text x="450" y="603" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">0–100 rating</text>
+
+<!-- Title -->
+<text x="340" y="638" text-anchor="middle" font-size="11" fill="#B4B2A9">ARIA — Account Research &amp; Intelligence Agent · System Architecture</text>
+</svg>
