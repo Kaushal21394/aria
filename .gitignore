@@ -51,3 +51,6 @@ logs/
 .coverage
 htmlcov/
 .claude/
+
+# ── Misc ───────────────────────────────────────────────────────────────────
+notebooks/notebooks/
